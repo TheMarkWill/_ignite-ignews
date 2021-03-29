@@ -4,10 +4,7 @@ import { signIn, signOut, useSession } from 'next-auth/client'
 
 import styles from './styles.module.scss'
 
-interface SignInButtonProps {
-}
-
-export default function SignInButton ({}: SignInButtonProps) {
+export function SignInButton () {
   const [ session ] = useSession();
 
   console.log(session);
