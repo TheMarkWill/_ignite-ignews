@@ -1,4 +1,4 @@
-import { SignInButton } from '../SignInButton'
+import RegisterAndLoginButton from '../../components/RegisterAndLoginButton'
 import styles from './styles.module.scss'
 
 export function Header(){
@@ -10,7 +10,7 @@ export function Header(){
           <a className={styles.active}>Home</a>
           <a>Posts</a>
         </nav>
-        <SignInButton />
+        <RegisterAndLoginButton />
       </div>
     </header>
   )
