@@ -1,4 +1,4 @@
-import SignInButton from '../SignInButton/index'
+import SignInButton from '../SignInButton'
 import styles from './styles.module.scss'
 
 export function Header(){
