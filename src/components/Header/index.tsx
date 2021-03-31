@@ -1,4 +1,4 @@
-import RegisterAndLoginButton from '../../components/RegisterAndLoginButton'
+import RegisterAndLoginButton from '../SignInButton'
 import styles from './styles.module.scss'
 
 export function Header(){
