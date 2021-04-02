@@ -1,5 +1,6 @@
 import { useSession, signIn } from 'next-auth/client';
 import { useRouter } from 'next/router';
+import Link from "next/link";
 import { api } from '../../services/api';
 import { GetStripeJS } from '../../services/stripe-js';
 
@@ -38,6 +39,19 @@ export default function SubscribeButton ({ priceId }: SubscribeButtonProps) {
       alert(error.message);
     }
     // Fazer a criação da cobrança
+  }
+
+  
+  if (session?.activeSubscription){
+    return (
+      <Link href="/posts">
+        <a 
+          className={styles.subscribeButton}
+          >
+          Go to Posts 🥰
+        </a>
+      </Link>
+    )
   }
 
   return (
