@@ -66,11 +66,12 @@ export const getStaticProps: GetStaticProps = async () => {
           year: 'numeric'
         })
       }
-    }) 
+    })
 
     return {
       props: {
         posts
-      }
+      },
+      revalidate: ( 60 * 60 * 1 ), // 1 hours 
     }
 }
