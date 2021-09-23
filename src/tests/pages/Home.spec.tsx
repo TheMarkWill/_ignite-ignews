@@ -1,7 +1,5 @@
 import { render, screen } from '@testing-library/react';
 import { mocked } from 'ts-jest/utils'
-import { useSession } from 'next-auth/client';
-import { useState } from 'react';
 
 import Home, { getStaticProps } from '../../pages';
 import { stripe } from '../../services/stripe';

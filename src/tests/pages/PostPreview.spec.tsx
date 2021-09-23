@@ -29,6 +29,10 @@ describe('Post Preview page', () => {
         useSessionMocked.mockReturnValueOnce([null, false]);
 
         render(<PostPreview post={post} />)
+
+
+        // Generate a link of playground to test element and select a item
+        screen.logTestingPlaygroundURL()
         
         expect(screen.getByText('My New Post')).toBeInTheDocument()
         expect(screen.getByText('Post content')).toBeInTheDocument()
@@ -82,7 +86,7 @@ describe('Post Preview page', () => {
         expect(response).toEqual(
             expect.objectContaining({
                 props: {
-                    post: // {"content": "<p>Post excerpt</p>", "dateModified": "09-23-2021", "datePublished": "09-20-2021", "excerpt": "Post excerpt", "lang": undefined, "slug": "fake-slug-post", "title": "My new post", "updatedAt": "23 de setembro de 2021"},
+                    post:
                     expect.objectContaining({
                         slug: 'fake-slug-post',
                         title: 'My new post',
