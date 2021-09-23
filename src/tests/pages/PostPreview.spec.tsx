@@ -32,7 +32,7 @@ describe('Post Preview page', () => {
 
 
         // Generate a link of playground to test element and select a item
-        screen.logTestingPlaygroundURL()
+        // screen.logTestingPlaygroundURL()
         
         expect(screen.getByText('My New Post')).toBeInTheDocument()
         expect(screen.getByText('Post content')).toBeInTheDocument()
